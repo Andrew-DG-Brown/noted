@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+  caret-color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  /* background-color: #0daa8b; */
+  background-color: #0f172a;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Header */
+
+header {
+  width: 100vw;
+  height: 400px;
+  background: rgb(15,23,42);
+background: linear-gradient(0deg, rgba(15,23,42,1) 7%, rgba(12,18,33,1) 100%);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid #475569; */
+  
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.text-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 33rem;
+}
+
+h2 {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #94a3b8;
+  text-align: center;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#blue-span {
+  color: #0284c7;
+  font-weight: 700;
+}
+
+/* app */
+
+.notes-app-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 70%;
+  margin-left: 15%;
+  animation: notes-load 400ms ease-in;
+}
+
+#app {
+  display: grid;
+  /* sticky note at 200px width */
+  grid-template-columns: repeat(auto-fill, 300px);
+  padding: 24px;
+  gap: 20px;
+  background-color: #0f1521;
+  border-radius: 10px;
+  box-shadow: 0 -1px 0 0 #4755694b;
+}
+
+.note {
+  height: 200px;
+  color: white;
+  box-sizing: border-box;
+  padding: 16px;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  background: #1e293b;
+  border: none;
+  resize: none;
+  font-family: sans-serif;
+  font-size: 18px;
+  transition: 0.17s;
+  line-height: 30px;
+}
+
+.note::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.note:focus, .note:active {
+  outline: none;
+ }
+
+.noteHead {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 10px;
+  padding: 10px;
+  height: 250px;
+  background-color: #1e293b;
+  box-shadow: 0 -1px 0 rgb(255, 255, 255, 20%);
+  animation: notes-load 300ms ease-in;
+}
+
+.noteHead:hover {
+  box-shadow: 0 0 0 3px #0284c7;
+  transition: 0.15s;
+}
+
+.inputContain {
+  display: flex;
+  height: 20%;
+  padding: 5px 10px;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.headerText {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #475569;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  height: 100%;
+  width: 100%;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.headerText::placeholder {
+  color: rgba(255, 255, 255, 0.677);
+}
+
+.headerText:focus, .headerText:active {
+ outline: none;
+}
+
+.add-note {
+  height: 250px;
+  border: none;
+  outline: none;
+  background: #0284c7;
+  border-radius: 10px;
+  font-size: 100px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.add-note:hover {
+  background:#2ba5e2
+}
+
+/* animations */
+
+@keyframes notes-load {
+  0% {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+/* breakpoint */
+
+@media (max-width: 1760px) {
+  .text-cont {
+    padding: 0 25rem ;
+  }
+}
+
+@media (max-width: 1510px) {
+  .text-cont {
+    padding: 0 20rem ;
+  }
+}
+
+@media (max-width: 1350px) {
+  .text-cont {
+    padding: 0 15rem ;
+  }
+}
+
+@media (max-width: 1190px) {
+  h2 {
+    font-size: 40px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 27px;
+  }
+  header {
+    height: 350px;
+  }
+}
+
+@media (max-width: 955px) {
+  .text-cont {
+    padding: 0 10rem ;
+  }
+}
+
+@media (max-width: 790px) {
+  .text-cont {
+    padding: 0 5rem ;
+  }
+}
+
+@media (max-width: 640px) {
+  .text-cont {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 536px) {
+  p {
+    display: none;
+  }
+}
