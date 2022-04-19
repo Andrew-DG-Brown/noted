@@ -18,7 +18,7 @@ addNote.addEventListener('click', () => {
   newNote.className = 'noteHead';
   newInputCont.className = 'inputContain'
   newInput.className = 'headerText'
-  newInput.placeholder = 'Tittle'
+  newInput.placeholder = 'Title'
 
   newInputCont.appendChild(newInput);
   newNote.appendChild(newInputCont);
