@@ -77,7 +77,8 @@ p {
 #app {
   display: grid;
   /* sticky note at 200px width */
-  grid-template-columns: repeat(auto-fill, 300px);
+  grid-template-columns: repeat(auto-fill, 268px);
+  justify-content: center;
   padding: 24px;
   gap: 20px;
   background-color: #0f1521;
